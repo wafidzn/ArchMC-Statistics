@@ -4,13 +4,13 @@
 export const embedConfig = {
     // Basic Site Information
     siteName: "ArchMC Statistics",
-    siteUrl: "https://stats.archmc.com", // Replace with your actual domain
+    siteUrl: "https://archmc.wafidzn.com", // Replace with your actual domain
 
     // Homepage Embed Settings
     homepage: {
         title: "ArchMC Statistics: Real-Time Player Stats",
         description: "Designed for competition, check out all statistics related to the ArchMC Server here. Track your progress and climb the leaderboards!",
-        image: "https://stats.archmc.com/api/og", // Dynamic OG image with absolute URL
+        image: "https://archmc.wafidzn.com/api/og", // Dynamic OG image with absolute URL
         imageAlt: "ArchMC Statistics Dashboard Preview",
     },
 
