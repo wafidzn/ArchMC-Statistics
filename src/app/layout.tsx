@@ -1,10 +1,64 @@
 import type { Metadata } from "next";
 import Navigation from "@/components/layout/Navigation";
+import { embedConfig } from "@/config/embed";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "ArchMC Statistics",
-  description: "Real-Time stats tracker to maximise player engagement.",
+  title: embedConfig.homepage.title,
+  description: embedConfig.homepage.description,
+  keywords: embedConfig.seo.keywords,
+  authors: [{ name: embedConfig.seo.author }],
+  creator: embedConfig.seo.author,
+  publisher: embedConfig.siteName,
+  
+  // OpenGraph
+  openGraph: {
+    title: embedConfig.homepage.title,
+    description: embedConfig.homepage.description,
+    url: embedConfig.siteUrl,
+    siteName: embedConfig.siteName,
+    images: [
+      {
+        url: embedConfig.homepage.image,
+        width: 1200,
+        height: 630,
+        alt: embedConfig.homepage.imageAlt,
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  
+  // Twitter Card
+  twitter: {
+    card: "summary_large_image",
+    title: embedConfig.homepage.title,
+    description: embedConfig.homepage.description,
+    images: [embedConfig.homepage.image],
+    creator: embedConfig.social.twitter,
+  },
+  
+  // Additional meta tags
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  
+  // Verification codes from config
+  verification: {
+    google: embedConfig.verification.google || undefined,
+    other: {
+      "msvalidate.01": embedConfig.verification.bing || undefined,
+      "yandex-verification": embedConfig.verification.yandex || undefined,
+    },
+  },
 };
 
 export default function RootLayout({
@@ -15,6 +69,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <meta name="theme-color" content="#FF7B00" />
         <link rel="stylesheet" href="https://use.typekit.net/YOUR_KIT_ID.css" />
         <link
           href="https://fonts.googleapis.com/icon?family=Material+Icons"
