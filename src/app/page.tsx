@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <main className="w-full h-full flex flex-col items-center">
+    <main className="w-full min-w-0 h-full flex flex-col items-center" style={{maxWidth: '100vw', overflowX: 'hidden'}}>
       <section className="w-7xl h-[500px] md:h-[500px] min-h-[600px] flex flex-col items-center justify-center gap-12 px-4">
         <div className="gap-6 flex flex-col items-center justify-center text-center">
           <a href="#">
@@ -17,17 +17,16 @@ export default function Home() {
             <p className="md:text-2xl text-md md:max-w-150 max-w-96 text-center text-medium text-neutral-400 text-balance">Designed for competition, check out all statistics related to the ArchMC Server here.</p>
           </div>
         </div>
-        <div className="flex gap-3 md:flex-row flex-col justify-center items-center md:w-auto w-full px-6">
-
-          <div className="md:w-50 md:h-16 w-full h-16 bg-bg-red text-red-500 rounded-lg flex items-center justify-center gap-2 cursor-pointer md:py-4 py-5 px-4">
+        
+        <div className="w-7xl md:pr-10 md:pl-10 px-4 flex md:justify-center md:items-center md:flex-row flex-col items-center md:gap-6 gap-6">
+          <div className="md:w-60 w-sm md:h-16 h-16 bg-bg-red text-red-500 rounded-lg md:p-4 p-4 flex items-center justify-center gap-2 cursor-pointer">
             <span className="material-icons md:!text-3xl !text-2xl">leaderboard</span>
             <span className="md:text-xl text-lg font-semibold">Gamemodes</span>
           </div>
-          <div className="md:w-50 md:h-16 w-full h-16 bg-bg-gray text-neutral-500 rounded-lg flex items-center justify-center gap-2 cursor-pointer md:py-4 py-5 px-4">
+          <div className="md:w-60 w-sm md:h-16 h-16 bg-bg-gray text-neutral-500 rounded-lg md:p-4 p-4 flex items-center justify-center gap-2 cursor-pointer">
             <span className="material-icons md:!text-3xl !text-2xl">account_circle</span>
             <span className="md:text-xl text-lg font-semibold">Your Stats</span>
           </div>
-
         </div>
       </section>
 
