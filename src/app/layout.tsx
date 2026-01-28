@@ -71,7 +71,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <meta name="theme-color" content="#FF7B00" />
+        <meta name="theme-color" content={embedConfig.brandColor} />
         <link rel="stylesheet" href="https://use.typekit.net/YOUR_KIT_ID.css" />
         <link
           href="https://fonts.googleapis.com/icon?family=Material+Icons"

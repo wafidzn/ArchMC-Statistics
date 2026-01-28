@@ -10,7 +10,7 @@ export const embedConfig = {
     homepage: {
         title: "ArchMC Statistics - Real-Time Player Stats",
         description: "Designed for competition, check out all statistics related to the ArchMC Server here. Track your progress and climb the leaderboards!",
-        image: "/api/og", // Dynamic OG image
+        image: "https://stats.archmc.com/api/og", // Dynamic OG image with absolute URL
         imageAlt: "ArchMC Statistics Dashboard Preview",
     },
 
@@ -22,7 +22,7 @@ export const embedConfig = {
     },
 
     // Brand Colors (for theme-color meta tag)
-    brandColor: "#FF7B00", // Your primary brand color
+    brandColor: "#c71f1f", // Your primary brand color
 
     // Additional SEO Settings
     seo: {
@@ -50,7 +50,7 @@ export function generateOGImageUrl(params?: {
     title?: string;
     subtitle?: string;
 }) {
-    const baseUrl = "/api/og";
+    const baseUrl = `${embedConfig.siteUrl}/api/og`;
     if (!params) return baseUrl;
 
     const searchParams = new URLSearchParams();

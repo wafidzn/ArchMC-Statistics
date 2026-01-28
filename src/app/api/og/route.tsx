@@ -72,7 +72,7 @@ export async function GET(request: NextRequest) {
               }}
             >
               <img
-                src="/favicon.ico"
+                src={`${new URL(request.url).origin}/favicon.ico`}
                 width="100"
                 height="100"
                 alt="ArchMC Logo"
