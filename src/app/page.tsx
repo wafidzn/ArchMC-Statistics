@@ -17,7 +17,7 @@ export default function Home() {
             <p className="md:text-2xl text-md md:max-w-150 max-w-96 text-center text-medium text-neutral-400 text-balance">Designed for competition, check out all statistics related to the ArchMC Server here.</p>
           </div>
         </div>
-        <div className="flex gap-3 md:flex-row flex-col justify-center items-center md:w-auto w-full md:px-0 px-6">
+        <div className="flex gap-3 md:flex-row flex-col justify-center items-center md:w-auto w-full px-6">
 
           <div className="md:w-50 md:h-16 w-full h-16 bg-bg-red text-red-500 rounded-lg flex items-center justify-center gap-2 cursor-pointer md:py-4 py-5 px-4">
             <span className="material-icons md:!text-3xl !text-2xl">leaderboard</span>
