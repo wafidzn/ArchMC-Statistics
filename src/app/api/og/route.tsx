@@ -14,7 +14,7 @@ export async function GET(request: NextRequest) {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            backgroundColor: '#c71f1f',
+            backgroundColor: '#171717',
           }}
         >
           <img
