@@ -53,11 +53,13 @@ export const metadata: Metadata = {
   
   // Verification codes from config
   verification: {
-    google: embedConfig.verification.google || undefined,
-    other: {
-      "msvalidate.01": embedConfig.verification.bing || undefined,
-      "yandex-verification": embedConfig.verification.yandex || undefined,
-    },
+    ...(embedConfig.verification.google && { google: embedConfig.verification.google }),
+    ...(embedConfig.verification.bing || embedConfig.verification.yandex ? {
+      other: {
+        ...(embedConfig.verification.bing && { "msvalidate.01": embedConfig.verification.bing }),
+        ...(embedConfig.verification.yandex && { "yandex-verification": embedConfig.verification.yandex }),
+      }
+    } : {}),
   },
 };
 
