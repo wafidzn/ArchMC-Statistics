@@ -57,31 +57,47 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="w-full h-[280px] bg-neutral-950 flex flex-col items-center">
-        <div className="w-7xl h-[500px] pr-10 pl-10 flex items-center">
-          <div className="w-full h-auto flex justify-between">
-            <div className="flex flex-col">
+      <footer className="w-full md:h-[280px] h-auto bg-neutral-950 flex flex-col items-center overflow-hidden">
+        <div className="w-full max-w-7xl md:h-[500px] h-auto md:px-10 px-4 flex items-center">
+          <div className="w-full h-auto md:flex md:justify-between flex-col-reverse md:flex-row flex gap-6 md:gap-0 py-8 md:py-0">
+            
+            {/* Products - Last on mobile, first on desktop */}
+            <div className="flex flex-col text-center md:text-left">
               <span className="font-semibold text-xl mb-2">Products</span>
               <a href="" className="text-neutral-400 text-lg leading-8">Home</a>
               <a href="" className="text-neutral-400 text-lg leading-8">Guilds</a>
               <a href="" className="text-neutral-400 text-lg leading-8">Economy</a>
             </div>
-            <div className="flex flex-col leading-7">
+            
+            {/* Gamemodes */}
+            <div className="flex flex-col leading-7 text-center md:text-left">
               <span className="font-semibold text-xl mb-2">Gamemodes</span>
               <a href="" className="text-neutral-400 text-lg leading-8">Lifesteal</a>
               <a href="" className="text-neutral-400 text-lg leading-8">Survival</a>
             </div>
-            <div className="flex flex-col leading-7">
+            
+            {/* Miscellaneous */}
+            <div className="flex flex-col leading-7 text-center md:text-left">
               <span className="font-semibold text-xl mb-2">Miscellaneous</span>
               <a href="" className="text-neutral-400 text-lg leading-8">GitHub Repo</a>
               <a href="" className="text-neutral-400 text-lg leading-8">Public API</a>
               <a href="" className="text-neutral-400 text-lg leading-8">Support</a>
             </div>
-            <div>
-              <div className="flex items-center gap-2 opacity-50"><span className="text-xl font-semibold">Design by</span><img className="w-10 h-6" src="/assets/svgs/shared/wafi.png" alt="Wafi" /></div>
-              <p className="max-w-50 text-balance mt-2 text-neutral-600">Not affiliated with Rule Your Own Game, Inc.</p>
+            
+            {/* Design by section */}
+            <div className="text-center md:text-left">
+              <div className="flex items-center gap-2 opacity-50 justify-center md:justify-start">
+                <span className="text-xl font-semibold">Design by</span>
+                <img className="w-10 h-6" src="/assets/svgs/shared/wafi.png" alt="Wafi" />
+              </div>
+              <p className="md:max-w-xs max-w-full text-balance mt-2 text-neutral-600 text-sm md:text-base">
+                Not affiliated with Rule Your Own Game, Inc.
+              </p>
             </div>
-            <img src="/assets/svgs/shared/wafidzn.png" alt="WafiDZN Logo" className="w-8 h-8" />
+            
+            {/* Logo - First on mobile (due to flex-col-reverse), last on desktop */}
+            <img src="/assets/svgs/shared/wafidzn.png" alt="WafiDZN Logo" className="w-8 h-8 mx-auto md:mx-0" />
+            
           </div>
         </div>
       </footer>
